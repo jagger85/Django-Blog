@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speecher</title>
+    <link rel='stylesheet' href="{% static 'speecher/speecher.css' %}">
+    <link rel='stylesheet' href="{% static 'speecher/glitching-header.css' %}">
+</head>
+<body>
+
+    <div class="wrapper">
+    
+    <h1 class="" data-text="Data Extraction Terminal">Data Extraction Terminal</h1>
+    
+    <div class="inputs-wrapper">
+    <form action="post">
+    <label for="video-url">Enter a youtube Url
+    <input type="text" id="video-url">
+    </label>
+
+    <label for="prompt">Enter a desired prompt
+    <input type="text" id="prompt">
+    </label>
+
+    <button type='submit'>Extract data</button>
+    </form>
+    </div>
+
+    <textarea name="result-text" id="result-text" placeholder="Processed info will appear here..."></textarea>
+
+    </div>
+</body>
+</html>
