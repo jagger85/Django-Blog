@@ -3,11 +3,15 @@
 {% load static %}
 
 {% block css_files%}
+
 <link rel="stylesheet" href="{% static "blog/index.css"%}">
+<link rel="stylesheet" href="{% static "blog/post.css"%}">
+<link rel="stylesheet" href="{% static "blog/all-posts.css"%}">
+
 {% endblock %}
 
 {% block title %}
-All posts
+Andy's Blog
 {% endblock  %}
 
 
@@ -18,9 +22,9 @@ All posts
 <section id="all-posts">
     <h2>My Collected Posts</h2>
     <ul>
-        <li>
-            <article></article>
-        </li>
+        {% for post in posts %}
+        {% include "blog/components/post-card.html" %}
+        {% endfor %}
     </ul>
 </section>
 
