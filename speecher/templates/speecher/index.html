@@ -2,35 +2,37 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speecher</title>
     <link rel='stylesheet' href="{% static 'speecher/speecher.css' %}">
-    <link rel='stylesheet' href="{% static 'speecher/glitching-header.css' %}">
 </head>
+
 <body>
 
     <div class="wrapper">
-    
-    <h1 class="" data-text="Data Extraction Terminal">Data Extraction Terminal</h1>
-    
-    <div class="inputs-wrapper">
-    <form action="post">
-    <label for="video-url">Enter a youtube Url
-    <input type="text" id="video-url">
-    </label>
+        <div class="title" data-text="Data Extraction Terminal">Data Extraction Terminal</div>
 
-    <label for="prompt">Enter a desired prompt
-    <input type="text" id="prompt">
-    </label>
+            <form action="post">
+                <div class="user-input-wrapper">
+                    <label for="video-url">URL</label>
+                        <input type="text" id="video-url" placeholder="Only a valid YouTube URL accepted">
 
-    <button type='submit'>Extract data</button>
-    </form>
-    </div>
+                </div>
+                <div class="user-input-wrapper">
+                    <label for="prompt">Prompt</label>
+                        <input type="text" id="prompt" placeholder="Inject your prompt here, data stream awaiting input">
+                </div>
 
-    <textarea name="result-text" id="result-text" placeholder="Processed info will appear here..."></textarea>
+                <button type='submit' id="extract-button">Extract data</button>
+            </form>
+
+        <textarea disabled name="result-text" id="result-text"
+            placeholder="Processed info will appear here..."></textarea>
 
     </div>
 </body>
+
 </html>
