@@ -1,16 +1,16 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <meta name="description" content="This is a blog about technology and the world">
+    <meta name="keywords" content="technology, blog, programming, django">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>
         {% block title %}{% endblock  %}
     </title>
-
 
     <link rel="stylesheet" href="{% static "global.css"%}">
     {%block css_files%}{% endblock %}
